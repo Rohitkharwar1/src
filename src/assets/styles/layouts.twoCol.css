@@ -1,0 +1,116 @@
+.container {
+  display: grid;
+  grid-template-columns: 30vw 75vw;
+  grid-row: 1rem;
+}
+
+.hide {
+  display: none;
+}
+
+.posterContainer {
+  height: 100vh; /* Set to your desired height */
+  width: auto; /* Set to your desired width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+  overflow: auto;
+}
+
+.poster {
+  position: relative;
+  top: 0;
+
+  transform: translate(-50%, -50%);
+  width: 969px;
+  height: 1372px;
+  border: 2px solid red;
+  transform: scale(0.5);
+  /* background-image: url("../../../public/image/banner.jpeg");
+  background-position: center;
+  background-size: contain; */
+}
+
+.logoImage {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 822.5px;
+  top: 50px;
+  translate: transform(-50%, -50%);
+}
+
+.mainHeading {
+  position: relative;
+  left: 80px;
+  top: -45px;
+  translate: transform(-50%, -50%);
+  font-size: 78px;
+}
+
+.positionContainer {
+  display: flex;
+  margin-top: -1rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.salaryContainer {
+  display: flex;
+  margin-top: 3rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.respContainer {
+  display: flex;
+  margin-top: 3rem;
+  gap: 1rem;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.respContainer-col {
+  display: flex;
+  gap: 3rem;
+}
+
+.positionMotif {
+  height: 60px;
+  width: 60px;
+  background-color: rebeccapurple;
+}
+
+.position {
+  font-size: 68px;
+}
+
+.subscript {
+  font-size: 24px;
+  align-self: flex-end;
+  margin-bottom: 1rem;
+}
+
+.salary {
+  font-size: 48px;
+}
+
+.respData {
+  margin-left: calc(60px + 6rem);
+  font-size: 32px;
+}
+
+/* footer {
+  position: absolute;
+  bottom: -90px;
+  left: 0;
+  font-size: 12px;
+  font-weight: bold;
+  height: 60px;
+  width: 969px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+} */
