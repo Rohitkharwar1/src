@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid red;
+  border: 2px solid #20202020;
   overflow: auto;
 }
 
@@ -25,7 +25,7 @@
   transform: translate(-50%, -50%);
   width: 969px;
   height: 1372px;
-  border: 2px solid red;
+  border: 2px solid #20202010;
   transform: scale(0.5);
   /* background-image: url("../../../public/image/banner.jpeg");
   background-position: center;
@@ -75,6 +75,16 @@
   display: flex;
   gap: 3rem;
 }
+.respContainer ul {
+  list-style-type: disc; /* or circle, square, etc. */
+  padding-left: 0; /* Remove default indentation */
+  margin-left: 0; /* Remove default margin */
+}
+.respContainer li {
+  /* list-style-type: disc; or circle, square, etc. */
+  padding-left: 0; /* Remove default indentation */
+  margin-left: 0; /* Remove default margin */
+}
 
 .positionMotif {
   height: 60px;
@@ -97,7 +107,8 @@
 }
 
 .respData {
-  margin-left: calc(60px + 6rem);
+  margin-left: calc(60px + 1rem);
+
   font-size: 32px;
 }
 

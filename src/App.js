@@ -8,6 +8,14 @@ import logo from "../src/assets/fbsLogo.png";
 
 function App() {
   const [formData, setFormData] = useState({});
+  function formatSalary(salary) {
+    const annualSalary = salary * 12;
+    if (annualSalary < 100000) {
+      return `${(annualSalary / 1000).toFixed(1)}k`;
+    } else {
+      return `${(annualSalary / 100000).toFixed(1)} LPA`;
+    }
+  }
 
   return (
     <div className="App w-screen">
@@ -45,7 +53,7 @@ function App() {
                 </h1>
                 <h1 className="mainHeading "> Are Hiring</h1>
               </div> */}
-            <div className="  py-5 pb-3 position-relative  d-flex flex-row align-items-center justify-content-center gap-3 w-screen">
+            <div className="  py-5 pb-3 position-relative  d-flex flex-row align-items-center justify-content-center gap-3 w-screen ">
               {/* <img
                 src="/image/banner.jpeg"
                 alt="404"
@@ -73,7 +81,7 @@ function App() {
               <img
                 src={logo}
                 alt="firstBitSolutions"
-                className=""
+                style={{ position: "absolute", top: 10, right: 10 }}
                 width={80}
                 height={80}
               />
@@ -95,25 +103,25 @@ function App() {
 
               <h3 className="subscript">{formData.jobType}</h3>
             </div> */}
-            <div className="d-flex align-items-start justify-content-between w-screen pt-3">
+            <div className="d-flex align-items-start justify-content-start w-screen pt-3">
               <img
-                src="/image/badge.png"
+                src="/image/color bg.png"
                 alt="sorry 404"
-                width={200}
+                width={230}
                 height={"100%"}
               />
 
-              <div className="">
+              <div className=" ml-5 d-flex align-items-baseline justify-content-center flex-row  ">
                 <h2
                   className=""
                   style={{
-                    fontSize: "3rem",
+                    fontSize: "55px",
                     fontWeight: "bold",
                   }}
                 >
                   {formData.jobTitle}
                 </h2>
-                <p className="fs-4">{formData.jobType}</p>
+                <p className="ml-5 fs-4 ">{formData.jobType}</p>
               </div>
 
               {/* <sub
@@ -126,12 +134,12 @@ function App() {
               >
                 {formData.jobType}
               </sub> */}
-              <img
-                src="/image/badge-right.png"
+              {/* <img
+                src="/image/color bg1.png"
                 alt="sorry 404"
                 width={200}
                 height={"100%"}
-              />
+              /> */}
             </div>
 
             <div className="salaryContainer w-screen">
@@ -140,7 +148,9 @@ function App() {
                 style={{ marginTop: "-40px" }}
               >
                 {formData.salary?.map((salary, index) => (
-                  <h2 key={index}>{salary}</h2>
+                  <h2 key={index}>
+                    {salary + "/-"} {`(${formatSalary(salary)})`}
+                  </h2>
                 ))}
                 <h3 className="[WFO]">[WFO]</h3>
               </div>
@@ -177,8 +187,8 @@ function App() {
               <div className="respContainer-col">
                 <div className=""></div>
                 <h2
-                  className="  px-3 py-2 bg-success text-white rounded-pill w-100 "
-                  style={{ marginTop: "-15px" }}
+                  className="  px-4 py-3  text-black rounded-pill w-100 "
+                  style={{ marginTop: "-15px", background: "#b0d40e" }}
                 >
                   Responsibilities
                 </h2>
@@ -197,8 +207,8 @@ function App() {
               <div className="respContainer-col">
                 <div className=""></div>
                 <h2
-                  className="  px-3 py-2 bg-success text-white rounded-pill w-100"
-                  style={{ marginTop: "-40px" }}
+                  className="  px-4 py-3  text-black rounded-pill w-100"
+                  style={{ marginTop: "-40px", background: "#b0d40e" }}
                 >
                   Qualifications
                 </h2>
@@ -217,8 +227,8 @@ function App() {
               <div className="respContainer-col">
                 <div className=""></div>
                 <h2
-                  className="px-3 py-2 bg-success text-white rounded-pill w-100"
-                  style={{ marginTop: "-40px" }}
+                  className="px-4 py-3  text-black rounded-pill w-100"
+                  style={{ marginTop: "-40px", background: "#b0d40e" }}
                 >
                   Benifits
                 </h2>
@@ -226,7 +236,7 @@ function App() {
               <div className="respData">
                 <ul>
                   {formData.benifits?.map((benifits, index) => (
-                    <li key={index} className="text-left">
+                    <li key={index} className="text-left ">
                       {benifits}
                     </li>
                   ))}
@@ -259,11 +269,11 @@ function App() {
               
             </div> */}
             <img
-              src="/image/footer.png"
+              src="/image/new badge.png"
               alt="404"
-              width={300}
-              height={300}
-              style={{ right: 0 }}
+              width={75}
+              height={"10%"}
+              style={{ right: 20 }}
               className="position-absolute right-0 bottom-0  "
             />
             <footer className="position-absolute left-0 bottom-0 text-center fs-2 w-100 font-weight-bolder ">
